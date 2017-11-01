@@ -1,0 +1,1 @@
+//#pragma comment( linker, "/subsystem:\"windows\" /entry:\"mainCRTStartup\"") //设置入口地址 - 不显示控制台 

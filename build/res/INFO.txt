@@ -1,0 +1,14 @@
+功能:windwos上 实现守护指定 进程组
+使用:
+   1. 在res/monitor.conf 中配置 守护的进程组
+   2. json格式
+   3. [ ["procName": "进程名",
+					"procPath":"进程路径",
+					"procType":"类型"} ]
+	 4. 
+    procType : console  控制台程序
+	  procType : server  后台程序
+	  procType : auto 自动匹配
+   
+	5. 不支持中文
+	6. 关闭守护请使用 close.bat

@@ -1,0 +1,5 @@
+﻿  stdafx.cpp
+  open_procress.cpp
+c:\visual studio 2017\projects\open_procress\open_procress\open_procress.cpp(80): warning C4552: “<”: 运算符不起任何作用；应输入带副作用的运算符
+  open_procress.vcxproj -> c:\visual studio 2017\Projects\open_procress\Debug\open_procress.exe
+  open_procress.vcxproj -> c:\visual studio 2017\Projects\open_procress\Debug\open_procress.pdb (Partial PDB)

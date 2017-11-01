@@ -1,0 +1,7 @@
+﻿  stdafx.cpp
+  open_procress.cpp
+open_procress.cpp(80): warning C4552: “<”: 运算符不起任何作用；应输入带副作用的运算符
+  正在生成代码
+  All 94 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  已完成代码的生成
+  open_procress.vcxproj -> c:\visual studio 2017\Projects\open_procress\Release\open_procress.exe

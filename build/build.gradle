@@ -1,0 +1,67 @@
+
+//定义变量
+String sFDIr = "./release"
+String sFDir_res = sFDIr+"/res"
+project.ext.cFDir_SFM = "../%s/Release/%s.exe"
+project.ext.sFDir_SFM = sFDIr
+void createFileDirs(file){
+	if(!file.exists()){
+			file.mkdirs()
+		}
+}
+void cpfiles(fileName){
+	String filePath = String.format(cFDir_SFM,fileName,fileName)
+	copy {
+			from filePath
+			into sFDir_SFM
+		}
+}
+
+
+task run()<<{
+	createFileDirs(new File(sFDIr))
+	cpfiles("Daemon")
+	cpfiles("Daemon_moniter")
+	cpfiles("open_procress")
+	copy {
+        from "./close.bat"
+        into sFDir_SFM
+		}
+	
+	copy {
+        from "./res"
+        into sFDir_res
+    }
+	
+	if(new File('./release.zip').exists()){
+		new File('./release.zip').delete()
+	}
+}
+
+task execute(type:Zip,dependsOn:run){
+	from sFDir_SFM
+	destinationDir = new File('.')
+	baseName = 'release'
+	extension = 'zip'		
+}
+execute<<{
+new File(sFDir_SFM).deleteDir()
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
